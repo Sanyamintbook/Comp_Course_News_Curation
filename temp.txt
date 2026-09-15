@@ -1,0 +1,121 @@
+AI-Powered Student Recommendation Platform
+1. Purpose 
+Build a single AI-powered recommendation platform that automatically understands educational content and delivers personalized recommendations across Courses, Competitive, News, Tests and Leisure based on each student's profile and learning journey.
+2. Business Principle
+The platform does not depend on manually created metadata. Every new content item is processed by AI so the platform can understand what the content is about before it becomes searchable. The recommendation engine then combines student profile, AI understanding and student behaviour to deliver relevant recommendations.
+3. End-to-End Architecture
+CONTENT SOURCES
+• Courses
+• Competitive
+• News
+• Tests
+• Leisure
+• PDF
+• Video
+• Website
+• Image
+• Quiz
+
+        ↓
+
+Content Ingestion
+
+        ↓
+
+Content Extraction
+(Convert every source into readable text)
+
+        ↓
+
+AI Content Understanding
+(Identify subject, concepts, learning purpose and relationships)
+
+        ↓
+
+Quality Validation
+(Check AI output consistency and confidence)
+
+        ↓
+
+Embedding Generation
+
+        ↓
+
+Content Repository + Vector Database
+
+────────────────────────────────────
+
+Student Onboarding
+
+        ↓
+
+Student Profile
+
+        ↓
+
+Student Behaviour Engine
+
+        ↓
+
+Student Representation
+
+        ↓
+
+Semantic Search
+
+        ↓
+
+Business Rule Engine
+
+        ↓
+
+AI Re-ranking
+
+        ↓
+
+Personalized Dashboard
+
+4. Student Profile
+5. Recommendation Logic
+The recommendation engine never asks AI to recommend from the entire repository.
+
+Step 1: Retrieve semantically similar content using embeddings.
+Step 2: Apply business rules (student profile, language, educational suitability, module filters).
+Step 3: Ask the LLM to rank only the shortlisted candidates.
+Step 4: Display the highest ranked recommendations.
+6. Personalization Flow
+Initial recommendations are based on the onboarding profile.
+As students interact with the platform, their behaviour continuously updates their interest profile. Future recommendations improve using:
+• Search history
+• Clicks
+• Watch time
+• Completed courses
+• Quiz attempts
+• Bookmarks
+• Favourite topics
+
+7. Dashboard Experience
+Each module is personalized:
+• Courses – Recommended learning content
+• Competitive – Relevant competitions and preparation
+• News – Relevant educational news
+• Tests – Practice assessments
+• Leisure – Educational activities and projects
+
+Selecting a topic (e.g. Programming) automatically groups all related content from every module under the same topic.
+8. Mandatory Components
+• Content Ingestion
+• Content Extraction
+• AI Content Understanding
+• Quality Validation
+• Embedding Generation
+• Vector Database
+• Student Profile
+• Semantic Search
+• Business Rule Engine
+• AI Re-ranking
+• Personalized Dashboard
+9. Future Enhancements
+Collaborative filtering, recommendation explanations, adaptive learning paths, administrator review workflow, analytics dashboards and continuous model evaluation.
+10. Conclusion
+This architecture separates content understanding from recommendation. AI first understands content, then the recommendation engine combines semantic similarity, business rules and student behaviour to deliver personalized educational recommendations. The design is modular, scalable and suitable for an MVP while providing a clear path to enterprise-scale deployment.
